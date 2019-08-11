@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+    <div class="header-box">
+        <div class="header-logo">
+            <a><img src="Logo.png" alt="logo"></a>
+            <a><img src="Logoname.png" alt="logo"></a>
+        </div>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#">Документация</a></li>
+                <li><a href="#">Введение</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Сообщество</a></li>
+            </ul>
+        </nav>
+        <form>
+            <p><input type="search" name="search" placeholder="search"></p>
+        </form>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#">v16.8.6</a></li>
+                <li><a href="#"><img src="icon.png" alt="icon">Переводы</a></li>
+                <li><a href="#">GitHub</a><img src="icon.png" alt="icon"/></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section>
+        <div class="banner-under-header">
+            <h1>
+                React
+            </h1>
+            <h2>
+                JavaScript-библиотека для создания пользовательских интерфейсов
+            </h2>
+            <a href="#">Начать работу</a>
+            <a href="#">Перейти к введению <img src="icon.png" alt="icon"></a>
+        </div>
+    </section>
+    <section>
+        <div class="column-text">
+            <div class="column-text-1">
+                <h3>
+                    Декларативный
+                </h3>
+                <p>
+                    Создавать интерактивные пользовательские интерфейсы на React — приятно и просто. Вам достаточно
+                    описать, как части интерфейса приложения выглядят в разных состояниях. React будет своевременно их
+                    обновлять, когда данные изменяются.
+                </p>
+                <p>
+                    Декларативные представления сделают код более предсказуемым и упростят отладку.
+                </p>
+            </div>
+            <div class="column-text-2">
+                <h3>
+                    Основан на компонентах
+                </h3>
+                <p>
+                    Создавайте инкапсулированные компоненты с собственным состоянием, а затем объединяйте их в сложные
+                    пользовательские интерфейсы.
+                </p>
+                <p>
+                    Поскольку логика компонента написана на JavaScript, а не содержится в шаблонах, можно с лёгкостью
+                    передавать самые разные данные по всему приложению и держать состояние вне DOM.
+                </p>
+            </div>
+            <div class="column-text-3">
+                <h3>
+                    Научитесь однажды — пишите где угодно
+                </h3>
+                <p>
+                    Нам не нужно ничего знать про остальную часть вашего технологического стека, поэтому вы можете
+                    разрабатывать новую функциональность на React, не изменяя существующий код.
+                </p>
+                <p>
+                    React также может работать на Node.js, и даже на мобильных платформах с помощью <a href="#">React
+                    Native</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="main-text-redactor">
+            <div>
+                <div class="main-text-1">
+                    <h3>
+                        <strong>Простой компонент</strong>
+                    </h3>
+                    <div>
+                        <p>
+                            React-компоненты реализуют метод render(), который принимает входные данные и возвращает
+                            что-то
+                            для вывода. В этом примере используется XML-подобный синтаксис под названием JSX. Входные
+                            данные, передаваемые в компонент, доступны в render() через this.props.
+                        </p>
+                        <p>
+                            <strong>JSX необязателен для работы с React.</strong> Попробуйте Babel REPL, чтобы увидеть
+                            JavaScript-код,
+                            полученный на этапе компиляции JSX
+                        </p>
+                    </div>
+                </div>
+                <div class="main-redactor-1">
+                    <div class="main-redactor-left">
+                        <div class="main-redactor-left-top">
+                            <p>
+                                ИНТЕРАКТИВНЫЙ JSX-РЕДАКТОР
+                            </p>
+                            <label>
+                                <input type="checkbox" checked>
+                                JSX?
+                            </label>
+                        </div>
+                        <div class="main-redactor-left-button">
+                        <pre>
+                            class HelloMessage extends React.Component {  render() {
+                                return (
+                                  <div>
+                                    Привет, {this.props.name}
+                                  </div>
+                                );
+                              }
+                            }
+
+                            ReactDOM.render(
+                              <HelloMessage name="Саша">,
+                              document.getElementById('hello-example')
+                            );
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="main-redactor-right">
+                        <div class="main-redactor-right-top">
+                            <p>
+                                РЕЗУЛЬТАТ
+                            </p>
+                        </div>
+                        <div class="main-redactor-right-button">
+                            <p>
+                                Привет, Саша
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="main-text-2">
+                    <h3>
+                        <strong>Компонент с состоянием</strong>
+                    </h3>
+                    <div>
+                        <p>
+                            Помимо входных данных (доступных через this.props), компонент поддерживает внутренние данные
+                            состояния (доступные через this.state). Когда данные состояния компонента изменятся, React
+                            ещё раз вызовет render() и обновит отрендеренную разметку.
+                        </p>
+                    </div>
+                </div>
+                <div class="main-redactor-2">
+                    <div class="main-redactor-left">
+                        <div class="main-redactor-left-top">
+                            <p>
+                                ИНТЕРАКТИВНЫЙ JSX-РЕДАКТОР
+                            </p>
+                            <label>
+                                <input type="checkbox" checked>
+                                JSX?
+                            </label>
+                        </div>
+                        <div class="main-redactor-left-button">
+                        <pre>
+                            class Timer extends React.Component {
+                              constructor(props) {
+                                super(props);
+                                this.state = { seconds: 0 };
+                              }
+
+                              tick() {
+                                this.setState(state => ({
+                                  seconds: state.seconds + 1
+                                }));
+                              }
+
+                              componentDidMount() {
+                                this.interval = setInterval(() => this.tick(), 1000);
+                              }
+
+                              componentWillUnmount() {
+                                clearInterval(this.interval);
+                              }
+
+                              render() {
+                                return (
+                                  <div>
+                                    Секунды: {this.state.seconds}
+                                  </div>
+                                );
+                              }
+                            }
+
+                            ReactDOM.render(
+                              <Timer>,
+                              document.getElementById('timer-example')
+                            );
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="main-redactor-right">
+                        <div class="main-redactor-right-top">
+                            <p>
+                                РЕЗУЛЬТАТ
+                            </p>
+                        </div>
+                        <div class="main-redactor-right-button">
+                            <p>
+                                Секунды:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="main-text-3">
+                    <h3>
+                        <strong>Приложение</strong>
+                    </h3>
+                    <div>
+                        <p>
+                            Используя props и state, можно создать небольшое приложение списка дел. В этом примере
+                            используется state для отслеживания текущего списка элементов, а также текста, введённого
+                            пользователем. Хотя обработчики событий встроены в разметку, они собираются и реализуются с
+                            помощью делегирования событий.
+                        </p>
+                    </div>
+                </div>
+                <div class="main-redactor-3">
+                    <div class="main-redactor-left">
+                        <div class="main-redactor-left-top">
+                            <p>
+                                ИНТЕРАКТИВНЫЙ JSX-РЕДАКТОР
+                            </p>
+                            <label>
+                                <input type="checkbox" checked>
+                                JSX?
+                            </label>
+                        </div>
+                        <div class="main-redactor-left-button">
+                        <pre>
+                            class HelloMessage extends React.Component {  render() {
+                                return (
+                                  <div>
+                                    Привет, {this.props.name}
+                                  </div>
+                                );
+                              }
+                            }
+
+                            ReactDOM.render(
+                              
+                              document.getElementById('hello-example')
+                            );
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="main-redactor-right">
+                        <div class="main-redactor-right-top">
+                            <p>
+                                РЕЗУЛЬТАТ
+                            </p>
+                        </div>
+                        <div class="main-redactor-right-button">
+                            <p>
+                                Привет, Саша
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="main-text-4">
+                    <h3>
+                        <strong>Компонент с использованием внешних плагинов</strong>
+                    </h3>
+                    <div>
+                        <p>
+                            React позволяет работать с другими библиотеками и фреймворками. В этом примере используется
+                            внешняя библиотека <strong>remarkable</strong>, чтобы в режиме реального времени преобразовать
+                            Markdown-синтаксис, введённый в элемент &#60;textarea&#62;.
+                        </p>
+                    </div>
+                </div>
+                <div class="main-redactor-4">
+                    <div class="main-redactor-left">
+                        <div class="main-redactor-left-top">
+                            <p>
+                                ИНТЕРАКТИВНЫЙ JSX-РЕДАКТОР
+                            </p>
+                            <label>
+                                <input type="checkbox" checked>
+                                JSX?
+                            </label>
+                        </div>
+                        <div class="main-redactor-left-button">
+                        <pre>
+                            class HelloMessage extends React.Component {  render() {
+                                return (
+                                  <div>
+                                    Привет, {this.props.name}
+                                  </div>
+                                );
+                              }
+                            }
+
+                            ReactDOM.render(
+
+                              document.getElementById('hello-example')
+                            );
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="main-redactor-right">
+                        <div class="main-redactor-right-top">
+                            <p>
+                                РЕЗУЛЬТАТ
+                            </p>
+                        </div>
+                        <div class="main-redactor-right-button">
+                            <h4>
+                                Редактор
+                            </h4>
+                            <p>
+                                Введите что-нибудь
+                            </p>
+
+                            <textarea name="comment" cols="40" rows="3"></textarea>
+
+                            <h4>
+                                Вывод
+                            </h4>
+                            <p>
+                                Привет, мир!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="main-footer">
+            <a href="#">Начать работу</a>
+            <a href="#">Перейти к введению <img src="icon.png" alt="icon"></a>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-box">
+        <div class="footer-logo">
+            <a><img src="Logo.png" alt="logo"></a>
+            <p>
+                Copyright © 2019 Facebook Inc.
+            </p>
+        </div>
+        <div class="footer-documentation">
+            <p>
+                ДОКУМЕНТАЦИЯ
+            </p>
+            <a href="#">Установка</a>
+            <a href="#">Основные понятия</a>
+            <a href="#">Продвинутые темы</a>
+            <a href="#">Справочник API</a>
+            <a href="#">Хуки (Новое)</a>
+            <a href="#">Участие в проекте</a>
+            <a href="#">FAQ</a>
+            <br>
+            <p>
+                СООБЩЕСТВО
+            </p>
+            <a href="#">Community Resources</a>
+            <a href="#">Tools</a>
+        </div>
+        <div class="footer-topics">
+            <p>
+                КАНАЛЫ
+            </p>
+            <a href="#">GitHub<img src="icon.png" alt="icon"/></a>
+            <a href="#">Stack Overflow<img src="icon.png" alt="icon"/></a>
+            <a href="#">Форум<img src="icon.png" alt="icon"/></a>
+            <a href="#">Чат Reactiflux<img src="icon.png" alt="icon"/></a>
+            <a href="#">Сообщество на DEV<img src="icon.png" alt="icon"/></a>
+            <a href="#">Facebook<img src="icon.png" alt="icon"/></a>
+            <a href="#">Twitter<img src="icon.png" alt="icon"/></a>
+
+            <br>
+            <p>
+                ДОПОЛНИТЕЛЬНО
+            </p>
+            <a href="#">Введение</a>
+            <a href="#">Блог</a>
+            <a href="#">Благодарности</a>
+            <a href="#">React Native<img src="icon.png" alt="icon"/></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
